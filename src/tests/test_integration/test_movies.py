@@ -138,7 +138,7 @@ async def test_get_movie_by_id_not_found(client):
     movie_id = 1
     response = await client.get(f"/api/v1/theater/movies/{movie_id}/")
     assert response.status_code == 404
-    assert response.json() == {"detail": "Movie with the given ID was not found."}
+    assert response.json() == {"detail": "Not Found"}
 
 
 @pytest.mark.asyncio
