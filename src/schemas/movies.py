@@ -16,16 +16,6 @@ class BaseMovieSchema(BaseModel):
     budget: float
     revenue: float
     country: str
-    # ToDo test it than
-    # @field_validator('date')
-    # @classmethod
-    # def validate_date(cls, value: date) -> date:
-    #     current_year = date.today().year
-    #
-    #     if value.year > current_year:
-    #         raise ValidationError(f"Movie's year cannot be grater than {current_year}")
-    #
-    #     return value
 
 
 class MovieDetailResponseSchema(BaseMovieSchema):

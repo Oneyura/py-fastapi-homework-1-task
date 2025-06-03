@@ -56,7 +56,7 @@ async def get_movie_details(movie_id: int, db: AsyncSession = Depends(get_db)) -
         if not result:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
-                detail="Not Found"
+                detail="Movie with the given ID was not found."
             )
         return MovieDetailResponseSchema.model_validate(result)
 
